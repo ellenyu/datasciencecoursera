@@ -1,0 +1,22 @@
+Code Book for run_analysis.R
+
+1. Information about the variables in the data set not contained in 
+the run_analysis.R output (tidy_data.txt).  The description of the 
+input variables used and not used by run_analysis.R can be found in
+the UCI HAR Dataset directory.  Specifically, the files "features.txt"
+and "features_info.txt"
+
+2. Information about the summary choices made:  
+The approach to constructing the tidy data set was to first combine
+the test and training data of all subjects into one dataset.  The activity
+and subject information had to be combined as well.  
+- One key assumption was that the activity and subject information files 
+were listed in the same order as the test and train data sets.
+
+- The tidy data set only used the mean and standard deviation measurements
+from the raw test and training sets. This would be any variables
+from the raw data set that contained the strings "mean(), std(), and
+meanFreq()".
+
+- The tidy data set then is result of grouping these variables by subject
+and activity and taking the average of those measurements.
